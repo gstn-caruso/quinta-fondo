@@ -1,4 +1,35 @@
 keys,en,es
 GAME_TITLE,Quinta Fondo,Quinta Fondo
-GAME_DESCRIPTION,A 3D racing game made with Godot.,Un juego de carreras 3D hecho en Godot.
-PROJECT_STATUS,Project foundation · Driving coming next,Base del proyecto · Conducción próximamente
+HIGHWAY_SIGN,BELTWAY / NO EXIT,CIRCUNVALACIÓN / SIN SALIDA
+ROUTE_LABEL,ROUTE 05 / 16 KM BELTWAY,RUTA 05 / ANILLO DE 16 KM
+HEAT,HEAT LEVEL,NIVEL DE BÚSQUEDA
+UNITS,UNIT.,PATR.
+PURSUIT_ACTIVE,PURSUIT IN PROGRESS,PERSECUCIÓN EN CURSO
+EVADING,BREAKING CONTACT,PERDIENDO A LA POLICÍA
+BUSTING,YOU ARE BEING BOXED IN,TE ESTÁN ENCERRANDO
+ESCAPE_HINT,Keep your distance for 8 seconds.,Mantené la distancia durante 8 segundos.
+CHASE_HINT,Leave the units 170 m behind to escape.,Alejate 170 m de los patrulleros para escapar.
+CONDITION,CONDITION,ESTADO
+NITRO,NITRO,NITRO
+NEAR_MISSES,CLOSE CALLS,ROCES
+QUICK_CONTROLS,SHIFT Nitro · C Camera · ESC Pause · M Audio,SHIFT Nitro · C Cámara · ESC Pausa · M Audio
+RADAR,RADAR / 160 M,RADAR / 160 M
+MUTED,MUTED,SILENCIO
+START,ENTER  /  START PURSUIT,ENTER  /  INICIAR PERSECUCIÓN
+RESUME,ENTER  /  RESUME,ENTER  /  CONTINUAR
+RETRY,ENTER  /  TRY AGAIN,ENTER  /  VOLVER A INTENTAR
+QUIT,Quit game,Salir del juego
+INTRO_TITLE,BREAK THE CORDON,ROMPÉ EL CERCO
+INTRO_BODY,A fast car. A long highway. Two units on your tail.,Un auto rápido. Una autopista enorme. Dos patrulleros atrás.
+PAUSED,PAUSED,EN PAUSA
+PAUSE_BODY,Take a breath. The highway can wait.,Tomá aire. La autopista puede esperar.
+ESCAPED,PURSUIT EVADED,LOGRASTE ESCAPAR
+ESCAPED_BODY,You broke contact. The highway is yours again.,Perdiste a los patrulleros. La autopista vuelve a ser tuya.
+BUSTED,BUSTED,TE ATRAPARON
+BUSTED_BODY,Your run is over. There is always another way out.,La persecución terminó. Siempre hay otra salida.
+HELP_DRIVE,W / ↑  Accelerate     A D / ← →  Steer,W / ↑  Acelerar     A D / ← →  Doblar
+HELP_NITRO,SHIFT  Nitro · Recharges over time and on close calls,SHIFT  Nitro · Recarga con el tiempo y al pasar cerca
+HELP_BRAKE,S / ↓ / SPACE  Brake · Steer while braking to slide,S / ↓ / ESPACIO  Frenar · Girá al frenar para derrapar
+HELP_CAMERA,C  Camera     M  Audio     ESC  Pause     R  Restart,C  Cámara     M  Audio     ESC  Pausa     R  Reiniciar
+OBJECTIVE,Keep moving. Lose the police. Protect your car.,Seguí moviéndote. Perdé a la policía. Cuidá el auto.
+RETRY_HINT,Change lanes. Use nitro on the straights.,Cambiá de carril. Aprovechá el nitro en las rectas.

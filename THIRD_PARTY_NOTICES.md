@@ -10,9 +10,12 @@ Fuentes oficiales para la versión utilizada:
 - https://github.com/godotengine/godot/blob/4.7.2-stable/COPYRIGHT.txt
 - https://godotengine.org/license/
 
-La escena, el icono y los textos iniciales son parte de este proyecto y están
-cubiertos por su licencia MIT. Se utiliza la fuente predeterminada de Godot,
-cuyos avisos están incluidos en los avisos del motor.
+Las escenas, los modelos de vehículos, la autopista, la interfaz, el icono y
+los textos son originales de este proyecto y están cubiertos por su licencia
+MIT. Los sonidos de motor, viento, sirenas e impactos se sintetizan en
+GDScript; no se incorporan grabaciones ni recursos de terceros. Se utiliza
+la fuente predeterminada de Godot, cuyos avisos están incluidos en los avisos
+del motor.
 
 Al incorporar recursos o complementos, se deben conservar sus licencias y
 actualizar este archivo.

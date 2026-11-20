@@ -9,9 +9,48 @@ Código abierto bajo licencia MIT.
 
 ## Estado
 
-Base inicial del proyecto: escena de presentación 3D, traducciones español/inglés
-y compilaciones automáticas. La conducción, las carreras, el tráfico y las
-persecuciones están pendientes de implementación.
+MVP jugable de una persecución policial en una autopista circular de **16 km**.
+La ruta tiene cuatro carriles, tráfico, barreras y un entorno urbano procedural.
+Los tramos se cargan alrededor del auto, con origen móvil y una caché acotada al
+circuito; se puede dar vueltas sin llegar a un final.
+
+- Conducción arcade, frenado, derrape y nitro recargable.
+- Dos patrulleros iniciales que persiguen, intentan encerrar y esquivan tráfico;
+  el nivel de búsqueda aumenta cada 25 segundos, hasta cuatro unidades.
+- Colisiones con daño, radar, estado del auto y recompensa de nitro al pasar
+  cerca de otro vehículo sin chocarlo.
+- Cámara con FOV progresivo, inclinación, vibración, estelas periféricas,
+  escapes de nitro y sonido de motor, viento, sirenas e impactos.
+- Menú inicial, pausa, escape, captura y reinicio; español e inglés nativos.
+
+La referencia de diseño es la persecución arcade de *Need for Speed: Most
+Wanted*. Los modelos, el escenario, los textos y los sonidos de este MVP son
+originales y se generan con recursos nativos de Godot. El alcance actual es
+una persecución; las carreras urbanas, el garaje y el mundo abierto quedan
+para etapas posteriores.
+
+![Persecución con nitro en la autopista](docs/highway-pursuit.png)
+
+## Cómo jugar
+
+Presionar **Enter** o el botón de inicio. Alejarse **170 m** de todos los
+patrulleros y mantener esa distancia **8 segundos** para escapar. Conducir
+despacio, cercado por la policía durante **5 segundos**, o agotar el estado
+del auto termina la partida. La pantalla de resultado permite volver a jugar.
+
+| Control | Acción |
+| --- | --- |
+| W / ↑ | Acelerar |
+| A D / ← → | Doblar |
+| S / ↓ / Espacio | Frenar; al girar también permite derrapar |
+| Shift | Nitro; soltar al agotarlo para volver a activarlo tras recargar |
+| C | Alternar distancia de la cámara |
+| Esc / Enter en pausa | Pausar / continuar |
+| R | Reiniciar la persecución |
+| M | Silenciar / activar el sonido |
+
+El nitro recarga con el tiempo. Los roces limpios recuperan carga extra.
+Usar los cuatro carriles y aprovechar el tráfico ayuda a perder a los patrulleros.
 
 ## Abrir y ejecutar
 
@@ -41,9 +80,11 @@ alternativa para otros idiomas. Los textos se mantienen en
 ## Estructura
 
 - `scenes/`: escenas del juego.
-- `scripts/`: lógica en GDScript y servicio de idioma.
+- `scripts/`: conducción, autopista, tráfico y policía, cámara, interfaz, audio
+  procedural y servicio de idioma.
 - `assets/`: icono, traducciones y futuros recursos del juego.
-- `tests/`: prueba de arranque de la escena y las traducciones.
+- `tests/`: pruebas de integración de entrada, traducciones, conducción,
+  colisiones continuas, captura/escape, reinicio y recorrido de todo el circuito.
 - `tools/`: verificación, exportación, empaquetado y publicación.
 - `licenses/`: avisos del motor y sus dependencias.
 
@@ -62,6 +103,23 @@ GODOT=godot python3 tools/check.py
 También se puede usar `python3 tools/install_godot.py` para descargar el editor
 y las plantillas oficiales fijadas en `release-config.json`. El instalador
 verifica los SHA-512 y muestra las rutas de los ejecutables y plantillas.
+
+Para reproducir la revisión visual con el renderizador real:
+
+```sh
+godot --path . --fixed-fps 60 --script res://tools/preview.gd -- ready
+godot --path . --fixed-fps 60 --script res://tools/preview.gd -- boost
+```
+
+Las capturas quedan en `build/previews/`. En Linux sin pantalla se puede
+anteponer `xvfb-run -a`. La vista `boost` coloca los vehículos para revisar
+la composición; las pruebas de integración verifican además las partidas
+con la simulación y la IA reales.
+
+El manejo utiliza coordenadas longitudinales y laterales de la ruta, con
+colisiones barridas entre autos, en lugar de una simulación de suspensión.
+Los efectos de velocidad funcionan con el renderizador Compatibility y no
+requieren desenfoque de movimiento.
 
 ## Compilaciones y versiones
 
