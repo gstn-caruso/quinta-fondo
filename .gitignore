@@ -1,0 +1,30 @@
+
+
+# Godot, generated builds and local credentials.
+.godot/
+.mono/
+export_credentials.cfg
+*.keystore
+*.p12
+*.pfx
+mono_crash.*.json
+.env
+.env.*
+.venv/
+.idea/
+.vscode/
+.vs/
+*.csproj.user
+.DS_Store
+Thumbs.db
+build/
+exports/
+dist/
+__pycache__/
+*.pyc
+
+# Keep source metadata; exclude the legacy import cache.
+!*.uid
+!*.import
+!*.translation
+.import/

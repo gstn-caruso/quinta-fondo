@@ -1,0 +1,15 @@
+{
+  "title": "Quinta Fondo",
+  "slug": "quinta-fondo",
+  "initial_version": "0.1.0",
+  "godot_version": "4.7.2",
+  "export_presets": {
+    "linux": "Linux",
+    "windows": "Windows"
+  },
+  "maintainer": "Gast\u00f3n Caruso <gstn.caruso@gmail.com>",
+  "tests": [
+    "tests/smoke.gd"
+  ],
+  "summary": "Base inicial de un juego de carreras 3D hecho en Godot. Esta versi\u00f3n incluye una escena de presentaci\u00f3n; la conducci\u00f3n, las carreras y las persecuciones est\u00e1n pendientes."
+}
