@@ -1,8 +1,8 @@
 # Quinta Fondo
 
 Juego de carreras 3D hecho en Godot, con conducción arcade, carreras urbanas y
-persecuciones como dirección de diseño. El repositorio empieza con una escena
-base; la conducción y el mundo abierto todavía están pendientes.
+persecuciones como dirección de diseño. Incluye un MVP de persecución policial
+en una autopista circular de 16 km; el mundo abierto sigue pendiente.
 
 - Usar Godot 4.7.2 estándar y GDScript. Mantener la versión sincronizada con
   `release-config.json` y la documentación.
